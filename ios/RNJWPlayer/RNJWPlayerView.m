@@ -657,10 +657,12 @@
         _playerViewController.enableLockScreenControls = YES;
     }
     
-    id allowsPictureInPicturePlayback = config[@"allowsPictureInPicturePlayback"];
-    if ((allowsPictureInPicturePlayback != nil && allowsPictureInPicturePlayback != (id)[NSNull null])) {
-        _playerViewController.allowsPictureInPicturePlayback = allowsPictureInPicturePlayback;
-    }
+//    id allowsPictureInPicturePlayback = config[@"allowsPictureInPicturePlayback"];
+//    if ((allowsPictureInPicturePlayback != nil && allowsPictureInPicturePlayback != (id)[NSNull null])) {
+//        _playerViewController.allowsPictureInPicturePlayback = allowsPictureInPicturePlayback;
+//    }
+    NSLog(@"allowsPictureInPicturePlayback=%s", allowsPictureInPicturePlayback ? @"YES" : @"NO");
+    _playerViewController.allowsPictureInPicturePlayback = false;
     
     id styling = config[@"styling"];
     [self setStyling:styling];
